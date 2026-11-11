@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../components/Card'
 
-export default function Home() {
+export default function Home(props) {
   let cardContents = [
     {
       imgSrc:"",
@@ -20,15 +20,20 @@ export default function Home() {
     },
   ]
   
+  const [bgcolor, setBgcolor] = useState()
+  function colorSet(){
+    setBgcolor(event.target.value)
+  }
   
   return (
 
     <div className='row'>
-      <Card title = "Rólunk" imgSrc="" link = "About.jsx"/>
-      <Card title = "Termékeink" imgSrc="" link = "Products.jsx"/>
-      <Card title = "Értékelések" imgSrc="" link = "Reviews.jsx"/>
+      <input type="color" onChange={colorSet} />
+      <Card cardbg =  {bgcolor} title = "Rólunk" imgSrc="" link = "About.jsx"/>
+      <Card cardbg =  {bgcolor} title = "Termékeink" imgSrc="" link = "Products.jsx"/>
+      <Card cardbg =  {bgcolor} title = "Értékelések" imgSrc="" link = "Reviews.jsx"/>
     </div>
-    
+
     // <div className="row m-3 p-3">
     //   {cardContents.forEach((c) => {
     //     return <Card title = {c.title} imgSrc={c.imgSrc} link = {c.link}/>
