@@ -20,7 +20,7 @@ export default function Home(props) {
     },
   ]
   
-  const [bgcolor, setBgcolor] = useState()
+  const [bgcolor, setBgcolor] = useState("")
   function colorSet(){
     setBgcolor(event.target.value)
   }
