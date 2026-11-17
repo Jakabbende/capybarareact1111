@@ -5,19 +5,22 @@ import Header from './components/Header'
 import About from './pages/About'
 import Products from './pages/Products'
 import Reviews from './pages/Reviews'
+import Gyakorlas from './pages/Gyakorlas'
 
 function App() {
 
+  const[bgcolor,setbgcolor] = useState()
   let path = window.location.pathname
 
   return (
     <>
-     <Header/>
+     <Header setbg = {setbgcolor}/>
 
-     {path == "/" && <Home/>}
+     {path == "/" && <Home bgcolor = {bgcolor}/>}
      {path == "/About.jsx" && <About/>}
      {path == "/Products.jsx" && <Products/>}
      {path == "/Reviews.jsx" && <Reviews/>}
+     {path == "/Gyakorlas.jsx" && <Gyakorlas/>}
      
      
      <footer>
