@@ -27,17 +27,17 @@ export default function Home(props) {
   
   return (
 
-    <div className='row'>
-      <input type="color" onChange={colorSet} />
-      <Card cardbg =  {bgcolor} title = "Rólunk" imgSrc="" link = "About.jsx"/>
-      <Card cardbg =  {bgcolor} title = "Termékeink" imgSrc="" link = "Products.jsx"/>
-      <Card cardbg =  {bgcolor} title = "Értékelések" imgSrc="" link = "Reviews.jsx"/>
-    </div>
-
-    // <div className="row m-3 p-3">
-    //   {cardContents.forEach((c) => {
-    //     return <Card title = {c.title} imgSrc={c.imgSrc} link = {c.link}/>
-    //   })}
+    // <div className='row'>
+    //   <input type="color" onChange={colorSet} />
+    //   <Card cardbg =  {bgcolor} title = "Rólunk" imgSrc="" link = "About.jsx"/>
+    //   <Card cardbg =  {bgcolor} title = "Termékeink" imgSrc="" link = "Products.jsx"/>
+    //   <Card cardbg =  {bgcolor} title = "Értékelések" imgSrc="" link = "Reviews.jsx"/>
     // </div>
+
+    <div className="row m-3 p-3">
+      {cardContents.map((c) => {
+        return <Card title = {c.title} imgSrc={c.imgSrc} link = {c.link}/>
+      })}
+    </div>
   )
 }
