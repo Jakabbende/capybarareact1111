@@ -34,10 +34,14 @@ export default function Home(props) {
     //   <Card cardbg =  {bgcolor} title = "Értékelések" imgSrc="" link = "Reviews.jsx"/>
     // </div>
 
-    <div className="row m-3 p-3">
-      {cardContents.map((c) => {
-        return <Card title = {c.title} imgSrc={c.imgSrc} link = {c.link}/>
-      })}
+    <div>
+      <input type="color" onChange={colorSet} />
+      
+      <div className="row m-3 p-3">
+        {cardContents.map((c) => {
+          return <Card title = {c.title} imgSrc={c.imgSrc} link = {c.link} cardbg = {bgcolor}/>
+        })}
+      </div>
     </div>
   )
 }
