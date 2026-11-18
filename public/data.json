@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "imgSrc": "/capy.jpg",
+        "name": "Karcsi",
+        "age": 3,
+        "price": 150000
+    },
+    {
+        "id": 2,
+        "imgSrc": "/capy.jpg",
+        "name": "Bözsi",
+        "age": 5,
+        "price": 220000
+    },
+    {
+        "id": 3,
+        "imgSrc": "/capy.jpg",
+        "name": "Gizi",
+        "age": 1,
+        "price": 99000
+    },
+    {
+        "id": 4,
+        "imgSrc": "/capy.jpg",
+        "name": "Józsi",
+        "age": 7,
+        "price": 310000
+    }
+]

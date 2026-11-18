@@ -1,12 +1,13 @@
 import React from "react";
 
- export default function CapybaraCard({ name, age, price }) {
+ export default function CapybaraCard({ name, age, price, imgSrc }) {
   return (
     <div className="capybara-card">
-      <h3>{name}</h3>
-      <p>Kor: {age} éves</p>
-      <p>Ár: {price.toLocaleString("hu-HU")} Ft</p>
-      <button>Kosárba</button>
+        <img src={imgSrc} />
+        <h3>{name}</h3>
+        <p>Kor: {age} éves</p>
+        <p>Ár: {price.toLocaleString("hu-HU")} Ft</p>
+        <button>Kosárba</button>
     </div>
   );
 }

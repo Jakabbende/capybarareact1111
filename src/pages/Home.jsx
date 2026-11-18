@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
 import Card from '../components/Card'
 
+
 export default function Home(props) {
   let cardContents = [
     {
-      imgSrc:"",
+      id:1,
+      imgSrc: "/capy.jpg",
       title: "Rólunk",
-      link: "About.jsx"
+      link: "/rolunk"
     }, 
     {
-      imgSrc:"",
+      id:2,
+      imgSrc: "/capy.jpg",
       title: "Termékeink",
-      link: "Product.jsx"
+      link: "/termekek"
     },
     {
-      imgSrc:"",
+      id:3,
+      imgSrc: "/capy.jpg",
       title: "Értékeléseink",
-      link: "Reviews.jsx"
+      link: "/ertekelesek"
     },
   ]
   
@@ -39,7 +43,7 @@ export default function Home(props) {
       
       <div className="row m-3 p-3">
         {cardContents.map((c) => {
-          return <Card title = {c.title} imgSrc={c.imgSrc} link = {c.link} cardbg = {bgcolor}/>
+          return <Card key={c.id} title = {c.title} imgSrc={c.imgSrc} sitepath = {c.link} cardbg = {bgcolor}/>
         })}
       </div>
     </div>
